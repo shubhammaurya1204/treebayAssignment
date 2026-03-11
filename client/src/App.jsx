@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export const serverUrl = "http://localhost:8081";
+export const serverUrl = "https://treebayassignment.onrender.com";
 
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
