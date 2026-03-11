@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import { serverUrl } from "../App";
+import { serverUrl } from "../App";
 import { setUser } from "../slices/userSlice";
 
 const Signup = () => {
@@ -26,7 +26,7 @@ const Signup = () => {
     console.log("1")
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8081/api/users/signup`, {
+      const response = await fetch(`${serverUrl}/api/users/signup`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   credentials: "include",
