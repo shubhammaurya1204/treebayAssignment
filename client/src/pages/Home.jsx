@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import { serverUrl } from "../App";
+import { serverUrl } from "../App";
 import { setUser } from "../slices/userSlice";
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
     }
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8081/api/users/login', {
+      const response = await fetch(`${serverUrl}/api/users/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),
