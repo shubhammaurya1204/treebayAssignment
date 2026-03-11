@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 // CORS
 app.use(
   cors({
-    origin: "https://treebay-assignment-client.vercel.app/",
+    origin: "https://treebay-assignment-client.vercel.app",
     credentials: true,
   })
 );
